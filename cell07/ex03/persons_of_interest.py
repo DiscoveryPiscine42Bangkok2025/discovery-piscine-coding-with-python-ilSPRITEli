@@ -16,5 +16,5 @@ women_scientists = {
  "grace": { "name": "Grace Hopper", "date_of_birth": "1906" }
  }
 
-famous_births = FamousBirth().famous_births()
+famous_births = FamousBirth().famous_births
 famous_births(women_scientists)

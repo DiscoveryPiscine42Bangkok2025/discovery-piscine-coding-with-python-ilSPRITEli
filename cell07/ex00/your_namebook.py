@@ -13,5 +13,5 @@ persons = {
 "fifi": "brindacier"
 }
 
-aon = ArrayOfName()
-print(aon.array_of_names(persons))
+array_of_names = ArrayOfName().array_of_names
+print(array_of_names(persons))

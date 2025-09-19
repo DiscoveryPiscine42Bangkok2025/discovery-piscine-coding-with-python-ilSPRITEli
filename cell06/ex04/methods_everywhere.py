@@ -8,7 +8,8 @@ class ShrinkEnlarge:
         padding = max(0, 8 - len(text))
         return text + ("Z" * padding)
 
-se = ShrinkEnlarge()
+shrink = ShrinkEnlarge().shrink
+enlarge = ShrinkEnlarge().enlarge
 
 args = sys.argv[1:]
 if not args:
@@ -16,9 +17,9 @@ if not args:
 else:
     for item in args:
         if len(item) > 8:
-            print(se.shrink(item))
+            print(shrink(item))
         elif len(item) < 8:
-            print(se.enlarge(item))
+            print(enlarge(item))
         else:
             print(item)
 

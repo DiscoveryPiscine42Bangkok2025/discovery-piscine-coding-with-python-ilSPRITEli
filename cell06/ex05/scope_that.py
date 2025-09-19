@@ -5,8 +5,8 @@ class AddOne:
 
 number = 5
 print(number)
-obj = AddOne()
-number = obj.add_one(number)
+add_one = AddOne().add_one
+number = add_one(number)
 
 print(number)
 

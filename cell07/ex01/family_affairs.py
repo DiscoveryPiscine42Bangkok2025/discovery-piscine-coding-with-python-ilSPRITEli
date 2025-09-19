@@ -11,5 +11,5 @@ dupont_family = {
  "franck": "red"
  }
 
-ftr = FindTheRedheads()
-print(ftr.find_the_redheads(dupont_family))
+find_the_redheads = FindTheRedheads().find_the_redheads
+print(find_the_redheads(dupont_family))
