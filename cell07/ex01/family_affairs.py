@@ -1,5 +1,6 @@
-def find_the_redheads(family: dict) -> list:
-    return [name for name, color in family.items() if color == "red"]
+class FindTheRedheads:
+    def find_the_redheads(self, family: dict) -> list:
+        return [name for name, color in family.items() if color == "red"]
 
 
 dupont_family = {
@@ -9,4 +10,6 @@ dupont_family = {
  "david": "red",
  "franck": "red"
  }
-print(find_the_redheads(dupont_family))
+
+ftr = FindTheRedheads()
+print(ftr.find_the_redheads(dupont_family))

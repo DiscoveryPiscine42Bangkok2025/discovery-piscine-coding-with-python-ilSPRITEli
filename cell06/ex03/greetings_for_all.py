@@ -1,13 +1,15 @@
-def greetings(name="Noble stranger"):
-    if not isinstance(name, str):
-        print("Error! It was not a name.")
-        return
-    print(f"Hello, {name}.")
+class Greetings:
+    def greet(self, name="noble stranger"):
+        if not isinstance(name, str):
+            print("Error! It was not a name.")
+            return
+        print(f"Hello, {name}.")
 
+greetings = Greetings()
 
-greetings("Alexandra")
-greetings("Walt")
-greetings()
-greetings(42)
+greetings.greet("Alexandra")
+greetings.greet("Walt")
+greetings.greet()
+greetings.greet(42)
 
 

@@ -1,7 +1,8 @@
-def upcase_it(text):
-    return text.upper()
+class UpcaseIt:
+    def upcase(self, text: str) -> str:
+        return text.upper()
 
-
-print(upcase_it("hello"))
+up = UpcaseIt()
+print(up.upcase("hello"))
 
 

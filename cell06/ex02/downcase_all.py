@@ -1,14 +1,16 @@
 import sys
 
-def downcase_it(text):
-    return text.lower()
+class DowncaseIt:
+    def downcase(self, text: str) -> str:
+        return text.lower()
 
-
+obj = DowncaseIt()
 args = sys.argv[1:]
+
 if not args:
     print("none")
 else:
     for s in args:
-        print(downcase_it(s))
+        print(obj.downcase(s))
 
 

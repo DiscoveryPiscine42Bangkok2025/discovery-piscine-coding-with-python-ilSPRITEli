@@ -1,8 +1,12 @@
-def famous_births(people: dict) -> None:
-    # people: key -> dict(name, date_of_birth)
-    sorted_entries = sorted(people.values(), key=lambda x: x["date_of_birth"])
-    for entry in sorted_entries:
-        print(f"{entry['name']} is a great scientist born in {entry['date_of_birth']}.")
+class FamousBirth:
+
+    def get_birth_date(self, person_dict: dict) -> str:
+        return person_dict["date_of_birth"]
+
+    def famous_births(self, people: dict) -> None:
+        sorted_entries = sorted(people.values(), key=self.get_birth_date)
+        for entry in sorted_entries:
+            print(f"{entry['name']} is a great scientist born in {entry['date_of_birth']}.")
 
 
 women_scientists = {
@@ -11,4 +15,6 @@ women_scientists = {
  "lise": { "name": "Lise Meitner", "date_of_birth": "1878" },
  "grace": { "name": "Grace Hopper", "date_of_birth": "1906" }
  }
+
+famous_births = FamousBirth().famous_births()
 famous_births(women_scientists)

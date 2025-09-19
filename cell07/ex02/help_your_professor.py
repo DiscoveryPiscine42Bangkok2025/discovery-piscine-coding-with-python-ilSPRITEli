@@ -1,8 +1,9 @@
-def average(scores: dict) -> float:
-    if not scores:
-        return 0.0
-    total = sum(scores.values())
-    return total / len(scores)
+class Avg:
+    def average(self, scores_dict: dict) -> float:
+        if not scores_dict:
+            return 0.0
+        total = sum(scores_dict.values())
+        return total / len(scores_dict)
 
 
 class_3B = {
@@ -17,5 +18,7 @@ class_3C = {
  "marc": 8,
  "stephanie": 13
 }
-print(f"Average for class 3B: {average(class_3B)}.")
-print(f"Average for class 3C: {average(class_3C)}.")
+
+avg = Avg()
+print(f"Average for class 3B: {avg.average(class_3B)}.")
+print(f"Average for class 3C: {avg.average(class_3C)}.")

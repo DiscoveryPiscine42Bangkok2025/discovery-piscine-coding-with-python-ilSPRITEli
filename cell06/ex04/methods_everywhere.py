@@ -1,14 +1,14 @@
 import sys
 
+class ShrinkEnlarge:
+    def shrink(self, text: str) -> str:
+        return text[:8]
 
-def shrink(text: str) -> str:
-    return text[:8]
+    def enlarge(self, text: str) -> str:
+        padding = max(0, 8 - len(text))
+        return text + ("Z" * padding)
 
-
-def enlarge(text: str) -> str:
-    padding = max(0, 8 - len(text))
-    return text + ("Z" * padding)
-
+se = ShrinkEnlarge()
 
 args = sys.argv[1:]
 if not args:
@@ -16,9 +16,9 @@ if not args:
 else:
     for item in args:
         if len(item) > 8:
-            print(shrink(item))
+            print(se.shrink(item))
         elif len(item) < 8:
-            print(enlarge(item))
+            print(se.enlarge(item))
         else:
             print(item)
 
