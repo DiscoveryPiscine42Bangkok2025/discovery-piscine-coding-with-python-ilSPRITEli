@@ -1,8 +1,8 @@
-first = float(input("Enter the first number: \n"))
-second = float(input("Enter the second number: \n"))
+first = int(input("Enter the first number: \n"))
+second = int(input("Enter the second number: \n"))
 
 result = first * second
-print(f"{first} x {second} = {int(result)}")
+print(f"{first} x {second} = {result}")
 
 if result > 0:
     print("The result is positive.")
