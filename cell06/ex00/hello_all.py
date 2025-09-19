@@ -2,4 +2,6 @@ class HelloAll:
     def hello(self):
         print("Hello, everyone!")
 
-HelloAll().hello()
+hello = HelloAll().hello
+
+hello()
