@@ -5,11 +5,11 @@ class Greetings:
             return
         print(f"Hello, {name}.")
 
-greetings = Greetings()
+greetings = Greetings().greet
 
-greetings.greet("Alexandra")
-greetings.greet("Walt")
-greetings.greet()
-greetings.greet(42)
+greetings("Alexandra")
+greetings("Walt")
+greetings()
+greetings(42)
 
 
